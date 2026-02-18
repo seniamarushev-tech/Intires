@@ -1,0 +1,7 @@
+mkdir -p lib
+cat > lib/validators.ts <<'EOF'
+// Temporary validators module (fix imports / implement properly)
+export function isNonEmptyString(v: unknown): v is string {
+  return typeof v === "string" && v.trim().length > 0;
+}
+EOF
